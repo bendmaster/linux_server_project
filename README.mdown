@@ -37,4 +37,4 @@ The software installed include the following:
 
 
 ##Third-party resources used to completed this project
-[This](https://github.com/stueken/FSND-P5_Linux-Server-Configuration) walkthrough guide and the subsequent [Digital Ocean](www.digitalocean.com) posts within were invaluable in creating this web server.
+[This](https://github.com/stueken/FSND-P5_Linux-Server-Configuration) walkthrough guide by user stueken and the subsequent [Digital Ocean](www.digitalocean.com) posts within were invaluable in creating this web server.

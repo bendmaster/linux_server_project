@@ -1,0 +1,40 @@
+#Linux Server Config Project
+
+##IP address
+52.26.130.130 -p 2200
+
+
+##URL
+[Item Catalog](http://ec2-52-26-130-130.us-west-2.compute.amazonaws.com)
+
+
+##Summary of software installed
+The software installed include the following:
+* Apache - the web server that hosts the application
+* Fail2Ban - monitors for repeated unsuccessful logins and bans attackers. Additionally submits emails to me when such events occur.
+* NTP - improves time syncronization
+* Mod_WSGI - serves Python apps from the Apache server
+* Git - pulls in the item_catalog project that is used on the website
+* VirtualEnv - creates a virtual environment to keep the application and its dependencies isolated from the main system
+* python-pip - installs Python modules used in the application
+* Flask - framework used for the app
+* python-psycopg2 - Python PostgreSQL adapter
+* PostgreSQL - serves as the database for the application
+* unattended-upgrades - automatically installs security updates
+
+
+
+##Summary of configurations made
+* Created user 'grader', added it to the sudoers file, and enforced key based authentication
+* Disabled remote password authentication in SSH config file
+* Disabled remote login for the root account in the SSH config file
+* Updated all packages
+* Configured the UFW to allow post 2200, 80, 123 only
+* Set timezone to UTC
+* Made Github repository inaccessible from the outside by creating an .htaccess file that redirects users
+* Created user catalog and only granted it access to modify the catalog database
+
+
+
+##Third-party resources used to completed this project
+[This](https://github.com/stueken/FSND-P5_Linux-Server-Configuration) walkthrough guide and the subsequent [Digital Ocean](www.digitalocean.com) posts within were invaluable in creating this web server.
